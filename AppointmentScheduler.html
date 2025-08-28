@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduler</title>
+</head>
+<body>
+    <div class="appointment-scheduler">
+        <h1>Appointment Scheduler</h1>
+
+        <div class="calendar-container">
+            <div class="calendar-placeholder">
+                [Calendar would be displayed here]
+            </div>
+        </div>
+
+        <div class="appointment-form">
+            <h2>Schedule New Appointment</h2>
+            <form>
+                <div class="form-group">
+                    <label for="patient">Patient:</label>
+                    <select id="patient" name="patient" required>
+                        <option value="">Select Patient</option>
+                        <option value="Jane Doe">Jane Doe</option>
+                        <option value="Mary Smith">Mary Smith</option>
+                        <option value="Sarah Johnson">Sarah Johnson</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Select Reason</option>
+                        <option value="Prenatal Checkup">Prenatal Checkup</option>
+                        <option value="Ultrasound">Ultrasound</option>
+                        <option value="Delivery Follow-up">Delivery Follow-up</option>
+                        <option value="Postnatal Checkup">Postnatal Checkup</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset">Clear</button>
+                    <button type="submit">Schedule Appointment</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="appointment-list">
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acio Sandra</td>
+                        <td>2024-11-15</td>
+                        <td>10:00</td>
+                        <td>Prenatal Checkup</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Acen Dorcus</td>
+                        <td>2024-11-16</td>
+                        <td>11:30</td>
+                        <td>Ultrasound</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

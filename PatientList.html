@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List</title>
+</head>
+<body>
+    <div class="patient-list">
+        <h1>Patient List</h1>
+
+        <div class="search-filter">
+            <input type="text" placeholder="Search patients...">
+            <select>
+                <option value="">All Statuses</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+
+        <div class="patient-actions">
+            <button>Add New Patient</button>
+            <button>Export List</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Contact</th>
+                    <th>Last Visit</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Akullo Gloria</td>
+                    <td>28</td>
+                    <td>0771234567</td>
+                    <td>2024-11-10</td>
+                    <td>Active</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Apio Semmy</td>
+                    <td>32</td>
+                    <td>0751234567</td>
+                    <td>2024-11-05</td>
+                    <td>Active</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Abonyo Juliet</td>
+                    <td>25</td>
+                    <td>0781234567</td>
+                    <td>2024-10-28</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button>Previous</button>
+            <span>Page 1 of 3</span>
+            <button>Next</button>
+        </div>
+    </div>
+</body>
+</html>
