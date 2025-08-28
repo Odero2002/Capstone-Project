@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record Form</title>
+</head>
+<body>
+    <div class="medical-record-form">
+        <h1>Add Medical Record</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="recordType">Record Type:</label>
+                <select id="recordType" name="recordType" required>
+                    <option value="prenatal">Prenatal</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="postnatal">Postnatal</option>
+                    <option value="ultrasound">Ultrasound</option>
+                    <option value="test">Test Results</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Details:</label>
+                <textarea id="details" name="details" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="files">Attachments:</label>
+                <input type="file" id="files" name="files" multiple>
+            </div>
+
+            <div class="form-actions">
+                <button type="reset">Clear</button>
+                <button type="submit">Save Record</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
