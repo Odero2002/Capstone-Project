@@ -4,77 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="patient-registration">
-        <h1>Patient Registration</h1>
+<body class="bg-gray-100">
+    <div class="patient-registration container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Patient Registration</h1>
 
-        <form>
-            <div class="form-section">
-                <h2>Personal Information</h2>
+        <form class="bg-white p-8 rounded-lg shadow-md">
+            <div class="form-section border-b pb-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-6">Personal Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="form-group">
+                        <label for="firstName" class="block text-gray-700 font-semibold mb-2">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
+                    <div class="form-group">
+                        <label for="lastName" class="block text-gray-700 font-semibold mb-2">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
+                    <div class="form-group">
+                        <label for="age" class="block text-gray-700 font-semibold mb-2">Age:</label>
+                        <input type="number" id="age" name="age" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" required>
-                </div>
+                    <div class="form-group">
+                        <label for="contact" class="block text-gray-700 font-semibold mb-2">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="contact">Contact Number:</label>
-                    <input type="tel" id="contact" name="contact" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" required></textarea>
-                </div>
-            </div>
-
-            <div class="form-section">
-                <h2>Medical Information</h2>
-
-                <div class="form-group">
-                    <label for="medicalHistory">Medical History:</label>
-                    <textarea id="medicalHistory" name="medicalHistory"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="allergies">Allergies:</label>
-                    <input type="text" id="allergies" name="allergies">
-                </div>
-
-                <div class="form-group">
-                    <label for="emergencyContact">Emergency Contact:</label>
-                    <input type="tel" id="emergencyContact" name="emergencyContact" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="expectedDueDate">Expected Due Date:</label>
-                    <input type="date" id="expectedDueDate" name="expectedDueDate">
-                </div>
-
-                <div class="form-group">
-                    <label for="riskLevel">Risk Level:</label>
-                    <select id="riskLevel" name="riskLevel">
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
+                    <div class="form-group md:col-span-2">
+                        <label for="address" class="block text-gray-700 font-semibold mb-2">Address:</label>
+                        <textarea id="address" name="address" required rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-actions">
-                <button type="reset">Clear</button>
-                <button type="submit">Register Patient</button>
+            <div class="form-section">
+                <h2 class="text-2xl font-semibold mb-6">Medical Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="form-group md:col-span-2">
+                        <label for="medicalHistory" class="block text-gray-700 font-semibold mb-2">Medical History:</label>
+                        <textarea id="medicalHistory" name="medicalHistory" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="allergies" class="block text-gray-700 font-semibold mb-2">Allergies:</label>
+                        <input type="text" id="allergies" name="allergies" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyContact" class="block text-gray-700 font-semibold mb-2">Emergency Contact:</label>
+                        <input type="tel" id="emergencyContact" name="emergencyContact" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expectedDueDate" class="block text-gray-700 font-semibold mb-2">Expected Due Date:</label>
+                        <input type="date" id="expectedDueDate" name="expectedDueDate" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="riskLevel" class="block text-gray-700 font-semibold mb-2">Risk Level:</label>
+                        <select id="riskLevel" name="riskLevel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions mt-8 text-right">
+                <button type="reset" class="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600 mr-4">Clear</button>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Register Patient</button>
             </div>
         </form>
     </div>

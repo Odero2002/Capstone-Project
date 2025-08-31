@@ -4,84 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="patient-list">
-        <h1>Patient List</h1>
+<body class="bg-gray-100">
+    <div class="patient-list container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Patient List</h1>
 
-        <div class="search-filter">
-            <input type="text" placeholder="Search patients...">
-            <select>
-                <option value="">All Statuses</option>
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
-            </select>
+        <div class="search-filter flex justify-between items-center mb-6">
+            <div class="flex space-x-4">
+                <input type="text" placeholder="Search patients..." class="px-4 py-2 border rounded-lg w-80 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <select aria-label="Filter by status" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    <option value="">All Statuses</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+            <div class="patient-actions space-x-4">
+                <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Add New Patient</button>
+                <button class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900">Export List</button>
+            </div>
         </div>
 
-        <div class="patient-actions">
-            <button>Add New Patient</button>
-            <button>Export List</button>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-4">ID</th>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Age</th>
+                        <th class="p-4">Contact</th>
+                        <th class="p-4">Last Visit</th>
+                        <th class="p-4">Status</th>
+                        <th class="p-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="p-4">1</td>
+                        <td class="p-4">Akullo Gloria</td>
+                        <td class="p-4">28</td>
+                        <td class="p-4">0771234567</td>
+                        <td class="p-4">2024-11-10</td>
+                        <td class="p-4"><span class="bg-green-200 text-green-800 py-1 px-3 rounded-full text-xs">Active</span></td>
+                        <td class="p-4 space-x-2">
+                            <button class="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600">View</button>
+                            <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">2</td>
+                        <td class="p-4">Apio Semmy</td>
+                        <td class="p-4">32</td>
+                        <td class="p-4">0751234567</td>
+                        <td class="p-4">2024-11-05</td>
+                        <td class="p-4"><span class="bg-green-200 text-green-800 py-1 px-3 rounded-full text-xs">Active</span></td>
+                        <td class="p-4 space-x-2">
+                            <button class="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600">View</button>
+                            <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-4">3</td>
+                        <td class="p-4">Abonyo Juliet</td>
+                        <td class="p-4">25</td>
+                        <td class="p-4">0781234567</td>
+                        <td class="p-4">2024-10-28</td>
+                        <td class="p-4"><span class="bg-red-200 text-red-800 py-1 px-3 rounded-full text-xs">Inactive</span></td>
+                        <td class="p-4 space-x-2">
+                            <button class="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600">View</button>
+                            <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Contact</th>
-                    <th>Last Visit</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Akullo Gloria</td>
-                    <td>28</td>
-                    <td>0771234567</td>
-                    <td>2024-11-10</td>
-                    <td>Active</td>
-                    <td>
-                        <button>View</button>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Apio Semmy</td>
-                    <td>32</td>
-                    <td>0751234567</td>
-                    <td>2024-11-05</td>
-                    <td>Active</td>
-                    <td>
-                        <button>View</button>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Abonyo Juliet</td>
-                    <td>25</td>
-                    <td>0781234567</td>
-                    <td>2024-10-28</td>
-                    <td>Inactive</td>
-                    <td>
-                        <button>View</button>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="pagination">
-            <button>Previous</button>
-            <span>Page 1 of 3</span>
-            <button>Next</button>
+        <div class="pagination flex justify-end items-center mt-6">
+            <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400 mr-4">Previous</button>
+            <span class="text-gray-700">Page 1 of 3</span>
+            <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400 ml-4">Next</button>
         </div>
     </div>
 </body>

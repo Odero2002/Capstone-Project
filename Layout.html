@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MHRMS Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Maternity Health Records Management System</h1>
-            <nav>
-                <a href="Dashboard.html">Dashboard</a>
-                <a href="PatientList.html">Patients</a>
-                <a href="AppointmentScheduler.html">Appointments</a>
-                <a href="Reports.html">Reports</a>
-            </nav>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container min-h-screen flex flex-col">
+        <header class="app-header bg-blue-600 text-white p-4 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Maternity Health Records Management System</h1>
+                <nav class="space-x-4">
+                    <a href="Dashboard.html" class="hover:text-blue-200">Dashboard</a>
+                    <a href="PatientList.html" class="hover:text-blue-200">Patients</a>
+                    <a href="AppointmentScheduler.html" class="hover:text-blue-200">Appointments</a>
+                    <a href="Reports.html" class="hover:text-blue-200">Reports</a>
+                </nav>
+            </div>
         </header>
 
-        <div class="app-main">
+        <main class="app-main flex-grow container mx-auto p-4">
             <!-- Page content would be inserted here -->
-            <div class="page-content">
+            <div class="page-content bg-white p-6 rounded-lg shadow-md">
                 [Page content would be loaded here]
             </div>
-        </div>
+        </main>
 
-        <footer class="app-footer">
+        <footer class="app-footer bg-gray-800 text-white p-4 text-center">
             <p>© 2023 Okole H/C III Kole District Uganda Maternity Records System</p>
         </footer>
     </div>

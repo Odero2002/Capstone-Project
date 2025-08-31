@@ -4,97 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="patient-profile">
-        <div class="profile-header">
-            <h1>Jane Doe's Profile</h1>
+<body class="bg-gray-100">
+    <div class="patient-profile container mx-auto p-8">
+        <div class="profile-header flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Jane Doe's Profile</h1>
             <div class="patient-status">
-                <span class="status-badge low">Low Risk</span>
+                <span class="status-badge bg-green-200 text-green-800 py-1 px-3 rounded-full text-sm font-semibold">Low Risk</span>
             </div>
         </div>
 
-        <div class="profile-section">
-            <h2>Personal Information</h2>
-            <div class="info-grid">
+        <div class="profile-section bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-6">Personal Information</h2>
+            <div class="info-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="info-item">
-                    <strong>Age:</strong> 28
+                    <strong class="block text-gray-600">Age:</strong> 28
                 </div>
                 <div class="info-item">
-                    <strong>Contact:</strong> 0771234567
+                    <strong class="block text-gray-600">Contact:</strong> 0771234567
                 </div>
                 <div class="info-item">
-                    <strong>Address:</strong> 123 Main St, Kampala
+                    <strong class="block text-gray-600">Address:</strong> 123 Main St, Kampala
                 </div>
                 <div class="info-item">
-                    <strong>Emergency Contact:</strong> John Doe - 0751234567
+                    <strong class="block text-gray-600">Emergency Contact:</strong> John Doe - 0751234567
                 </div>
                 <div class="info-item">
-                    <strong>Expected Due Date:</strong> 2024-03-15
+                    <strong class="block text-gray-600">Expected Due Date:</strong> 2024-03-15
                 </div>
                 <div class="info-item">
-                    <strong>Last Visit:</strong> 2023-11-10
+                    <strong class="block text-gray-600">Last Visit:</strong> 2023-11-10
                 </div>
                 <div class="info-item">
-                    <strong>Next Appointment:</strong> 2023-11-20
-                </div>
-            </div>
-        </div>
-
-        <div class="profile-section">
-            <h2>Medical Information</h2>
-            <div class="info-grid">
-                <div class="info-item">
-                    <strong>Medical History:</strong> No significant medical history
-                </div>
-                <div class="info-item">
-                    <strong>Allergies:</strong> Penicillin
+                    <strong class="block text-gray-600">Next Appointment:</strong> 2023-11-20
                 </div>
             </div>
         </div>
 
-        <div class="profile-section">
-            <h2>Medical Records</h2>
-            <button>Add New Record</button>
+        <div class="profile-section bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-6">Medical Information</h2>
+            <div class="info-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="info-item">
+                    <strong class="block text-gray-600">Medical History:</strong> No significant medical history
+                </div>
+                <div class="info-item">
+                    <strong class="block text-gray-600">Allergies:</strong> Penicillin
+                </div>
+            </div>
+        </div>
 
-            <table>
+        <div class="profile-section bg-white p-6 rounded-lg shadow-md mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Medical Records</h2>
+                <button class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Add New Record</button>
+            </div>
+            <table class="w-full text-left">
                 <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Type</th>
-                        <th>Notes</th>
-                        <th>Actions</th>
+                    <tr class="bg-gray-200">
+                        <th class="p-4">Date</th>
+                        <th class="p-4">Type</th>
+                        <th class="p-4">Notes</th>
+                        <th class="p-4">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2024-10-15</td>
-                        <td>Prenatal Checkup</td>
-                        <td>All vitals normal</td>
-                        <td>
-                            <button>View</button>
-                            <button>Edit</button>
-                            <button>Delete</button>
+                    <tr class="border-b">
+                        <td class="p-4">2024-10-15</td>
+                        <td class="p-4">Prenatal Checkup</td>
+                        <td class="p-4">All vitals normal</td>
+                        <td class="p-4 space-x-2">
+                            <button class="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600">View</button>
+                            <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Delete</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>2024-09-20</td>
-                        <td>Ultrasound</td>
-                        <td>Normal fetal development</td>
-                        <td>
-                            <button>View</button>
-                            <button>Edit</button>
-                            <button>Delete</button>
+                        <td class="p-4">2024-09-20</td>
+                        <td class="p-4">Ultrasound</td>
+                        <td class="p-4">Normal fetal development</td>
+                        <td class="p-4 space-x-2">
+                            <button class="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600">View</button>
+                            <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                            <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Delete</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="profile-actions">
-            <button>Edit Profile</button>
-            <button>Schedule Appointment</button>
-            <button>Print Summary</button>
+        <div class="profile-actions text-right space-x-4">
+            <button class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600">Edit Profile</button>
+            <button class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700">Schedule Appointment</button>
+            <button class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900">Print Summary</button>
         </div>
     </div>
 </body>

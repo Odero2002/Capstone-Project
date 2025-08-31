@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notification Panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="notification-panel">
-        <h2>Notifications</h2>
+<body class="bg-gray-100 p-8">
+    <div class="notification-panel bg-white p-6 rounded-lg shadow-md max-w-md mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Notifications</h2>
 
-        <div class="notification-list">
-            <div class="notification appointment">
-                <div class="notification-content">
-                    <p>Appointment with Acio Sandra in 30 minutes</p>
-                    <span class="notification-time">10:00 AM</span>
+        <div class="notification-list space-y-4">
+            <div class="notification appointment flex items-start p-4 bg-blue-100 border-l-4 border-blue-500 rounded-r-lg">
+                <div class="notification-content flex-grow">
+                    <p class="text-blue-800">Appointment with Acio Sandra in 30 minutes</p>
+                    <span class="notification-time text-sm text-blue-600">10:00 AM</span>
                 </div>
-                <button class="dismiss-button">×</button>
+                <button class="dismiss-button text-blue-500 hover:text-blue-700 ml-4">×</button>
             </div>
 
-            <div class="notification alert">
-                <div class="notification-content">
-                    <p>High risk patient Acen Dorcus needs attention</p>
-                    <span class="notification-time">Yesterday</span>
+            <div class="notification alert flex items-start p-4 bg-red-100 border-l-4 border-red-500 rounded-r-lg">
+                <div class="notification-content flex-grow">
+                    <p class="text-red-800">High risk patient Acen Dorcus needs attention</p>
+                    <span class="notification-time text-sm text-red-600">Yesterday</span>
                 </div>
-                <button class="dismiss-button">×</button>
+                <button class="dismiss-button text-red-500 hover:text-red-700 ml-4">×</button>
             </div>
 
-            <div class="notification reminder">
-                <div class="notification-content">
-                    <p>Monthly report generation due</p>
-                    <span class="notification-time">2 days ago</span>
+            <div class="notification reminder flex items-start p-4 bg-yellow-100 border-l-4 border-yellow-500 rounded-r-lg">
+                <div class="notification-content flex-grow">
+                    <p class="text-yellow-800">Monthly report generation due</p>
+                    <span class="notification-time text-sm text-yellow-600">2 days ago</span>
                 </div>
-                <button class="dismiss-button">×</button>
+                <button class="dismiss-button text-yellow-500 hover:text-yellow-700 ml-4">×</button>
             </div>
         </div>
     </div>

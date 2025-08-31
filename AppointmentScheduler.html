@@ -4,94 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Scheduler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="appointment-scheduler">
-        <h1>Appointment Scheduler</h1>
+<body class="bg-gray-100">
+    <div class="appointment-scheduler container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Appointment Scheduler</h1>
 
-        <div class="calendar-container">
-            <div class="calendar-placeholder">
-                [Calendar would be displayed here]
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2">
+                <div class="calendar-container bg-white p-6 rounded-lg shadow-md mb-8">
+                    <div class="calendar-placeholder h-96 flex items-center justify-center text-gray-500">
+                        [Calendar would be displayed here]
+                    </div>
+                </div>
+
+                <div class="appointment-list bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-6">Upcoming Appointments</h2>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-gray-200">
+                                <th class="p-4">Patient</th>
+                                <th class="p-4">Date</th>
+                                <th class="p-4">Time</th>
+                                <th class="p-4">Reason</th>
+                                <th class="p-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="p-4">Acio Sandra</td>
+                                <td class="p-4">2024-11-15</td>
+                                <td class="p-4">10:00</td>
+                                <td class="p-4">Prenatal Checkup</td>
+                                <td class="p-4 space-x-2">
+                                    <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                                    <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">Acen Dorcus</td>
+                                <td class="p-4">2024-11-16</td>
+                                <td class="p-4">11:30</td>
+                                <td class="p-4">Ultrasound</td>
+                                <td class="p-4 space-x-2">
+                                    <button class="bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600">Edit</button>
+                                    <button class="bg-red-500 text-white py-1 px-3 rounded-lg hover:bg-red-600">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
 
-        <div class="appointment-form">
-            <h2>Schedule New Appointment</h2>
-            <form>
-                <div class="form-group">
-                    <label for="patient">Patient:</label>
-                    <select id="patient" name="patient" required>
-                        <option value="">Select Patient</option>
-                        <option value="Jane Doe">Jane Doe</option>
-                        <option value="Mary Smith">Mary Smith</option>
-                        <option value="Sarah Johnson">Sarah Johnson</option>
-                    </select>
-                </div>
+            <div class="appointment-form bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-6">Schedule New Appointment</h2>
+                <form>
+                    <div class="form-group mb-4">
+                        <label for="patient" class="block text-gray-700 font-semibold mb-2">Patient:</label>
+                        <select id="patient" name="patient" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <option value="">Select Patient</option>
+                            <option value="Jane Doe">Jane Doe</option>
+                            <option value="Mary Smith">Mary Smith</option>
+                            <option value="Sarah Johnson">Sarah Johnson</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
+                    <div class="form-group mb-4">
+                        <label for="date" class="block text-gray-700 font-semibold mb-2">Date:</label>
+                        <input type="date" id="date" name="date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="time">Time:</label>
-                    <input type="time" id="time" name="time" required>
-                </div>
+                    <div class="form-group mb-4">
+                        <label for="time" class="block text-gray-700 font-semibold mb-2">Time:</label>
+                        <input type="time" id="time" name="time" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
 
-                <div class="form-group">
-                    <label for="reason">Reason:</label>
-                    <select id="reason" name="reason" required>
-                        <option value="">Select Reason</option>
-                        <option value="Prenatal Checkup">Prenatal Checkup</option>
-                        <option value="Ultrasound">Ultrasound</option>
-                        <option value="Delivery Follow-up">Delivery Follow-up</option>
-                        <option value="Postnatal Checkup">Postnatal Checkup</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
+                    <div class="form-group mb-6">
+                        <label for="reason" class="block text-gray-700 font-semibold mb-2">Reason:</label>
+                        <select id="reason" name="reason" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <option value="">Select Reason</option>
+                            <option value="Prenatal Checkup">Prenatal Checkup</option>
+                            <option value="Ultrasound">Ultrasound</option>
+                            <option value="Delivery Follow-up">Delivery Follow-up</option>
+                            <option value="Postnatal Checkup">Postnatal Checkup</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
 
-                <div class="form-actions">
-                    <button type="reset">Clear</button>
-                    <button type="submit">Schedule Appointment</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="appointment-list">
-            <h2>Upcoming Appointments</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Patient</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Reason</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Acio Sandra</td>
-                        <td>2024-11-15</td>
-                        <td>10:00</td>
-                        <td>Prenatal Checkup</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Cancel</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Acen Dorcus</td>
-                        <td>2024-11-16</td>
-                        <td>11:30</td>
-                        <td>Ultrasound</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Cancel</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                    <div class="form-actions text-right">
+                        <button type="reset" class="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600 mr-4">Clear</button>
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Schedule</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

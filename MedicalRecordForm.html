@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Record Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="medical-record-form">
-        <h1>Add Medical Record</h1>
+<body class="bg-gray-100">
+    <div class="medical-record-form container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-8">Add Medical Record</h1>
 
-        <form>
-            <div class="form-group">
-                <label for="recordType">Record Type:</label>
-                <select id="recordType" name="recordType" required>
+        <form class="bg-white p-8 rounded-lg shadow-md">
+            <div class="form-group mb-6">
+                <label for="recordType" class="block text-gray-700 font-semibold mb-2">Record Type:</label>
+                <select id="recordType" name="recordType" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                     <option value="prenatal">Prenatal</option>
                     <option value="delivery">Delivery</option>
                     <option value="postnatal">Postnatal</option>
@@ -21,24 +22,24 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
+            <div class="form-group mb-6">
+                <label for="date" class="block text-gray-700 font-semibold mb-2">Date:</label>
+                <input type="date" id="date" name="date" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
             </div>
 
-            <div class="form-group">
-                <label for="details">Details:</label>
-                <textarea id="details" name="details" required></textarea>
+            <div class="form-group mb-6">
+                <label for="details" class="block text-gray-700 font-semibold mb-2">Details:</label>
+                <textarea id="details" name="details" required rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="files">Attachments:</label>
-                <input type="file" id="files" name="files" multiple>
+            <div class="form-group mb-8">
+                <label for="files" class="block text-gray-700 font-semibold mb-2">Attachments:</label>
+                <input type="file" id="files" name="files" multiple class="w-full text-gray-700 py-2 px-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
             </div>
 
-            <div class="form-actions">
-                <button type="reset">Clear</button>
-                <button type="submit">Save Record</button>
+            <div class="form-actions text-right">
+                <button type="reset" class="bg-gray-500 text-white py-2 px-6 rounded-lg hover:bg-gray-600 mr-4">Clear</button>
+                <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">Save Record</button>
             </div>
         </form>
     </div>
